@@ -75,12 +75,12 @@ column_names = {
                 "PTB Smear Positive", "PTB TB Lamp", "PTB LF-LAM other", "PTB Clinically Diagnosed",
                 "EPTB Xpert Positive", "EPTB Clinically Diagnosed", "Total TB Cases notified", "All TB cases who had Xpert test",
                 "All TB cases who had Truenat test"], # 11
-    'block2b': ["Year", "Quarter", "LGA", "Sex", "0—4", "5—14",
-                   "15—24", "25—34", "35—44", "45—54", "55—64", "> 65", "Total"],
-    'block2c': ["Year", "Quarter", "LGA", "Sex", "0—4", "5—14",
-                   "15—24", "25—34", "35—44", "45—54", "55—64", "> 65", "Total"],
-    'block2d': ["Year", "Quarter", "LGA", "Sex", "0—4", "5—14",
-                   "15—24", "25—34", "35—44", "45—54", "55—64", "> 65", "Total"]
+    'block2b': ["Year", "Quarter", "LGA", "Sex", "0 to 4", "5 to 14",
+                   "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"],
+    'block2c': ["Year", "Quarter", "LGA", "Sex", "0 to 4", "5 to 14",
+                   "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"],
+    'block2d': ["Year", "Quarter", "LGA", "Sex", "0 to 4", "5 to 14",
+                   "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"]
 }
 def process_lga_data(block, file_path, year):
     """
