@@ -9,6 +9,10 @@ im = Image.open("images/omdena_kaduna_chapter_logo.png")
 block1a = pd.read_csv("datasets/block1a_19_to_23_complete.csv", index_col=0)
 block2a = pd.read_csv("datasets/block2a_19_to_23_complete.csv", index_col=0)
 block2b =  pd.read_csv("datasets/block2b_19_to_23_complete.csv", index_col=0)
+# Convert to int data types
+b2b_columns = [["0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"]]
+block2b[b2b_columns] = block2b[b2b_columns].astype("int")
+
 tb_cluster = pd.read_csv("datasets/block2a_for_clustering_19_to_23_complete_4_clusters.csv")
 
 # Read the shapefile
