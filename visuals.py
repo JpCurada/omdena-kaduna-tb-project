@@ -8,7 +8,7 @@ im = Image.open("images/omdena_kaduna_chapter_logo.png")
 
 block1a = pd.read_csv("datasets/block1a_19_to_23_complete.csv", index_col=0)
 block2a = pd.read_csv("datasets/block2a_19_to_23_complete.csv", index_col=0)
-block2b =  pd.read_csv("datasets/block2b_19_to_23_complete.csv")
+block2b =  pd.read_csv("datasets/block2b_19_to_23_complete.csv", index_col=0)
 tb_cluster = pd.read_csv("datasets/block2a_for_clustering_19_to_23_complete_4_clusters.csv")
 
 # Read the shapefile
