@@ -159,6 +159,7 @@ def show_gender_age_tb_bar(year_quarter):
         color='Sex',
         barmode='group',
         title=chart_title,
+        category_orders={"Age_Group": ["0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65"]}
     )
 
     # Customize the layout
