@@ -2,7 +2,7 @@ import streamlit as st
 from etl import process_lga_data
 import streamlit.components.v1 as components
 import pygwalker as pyg
-from Home import im
+from visuals import im
 
 st.set_page_config(page_title="Kaduna TB Explorer", 
                    page_icon=im, 
