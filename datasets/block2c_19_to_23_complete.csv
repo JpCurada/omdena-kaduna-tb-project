@@ -1,4 +1,4 @@
-,Year,Quarter,LGA,Sex,0—4,5—14,15—24,25—34,35—44,45—54,55—64,> 65,Total,Year_Quarter
+,Year,Quarter,LGA,Sex,0 to 4,5 to 14,15 to 24,25 to 34,35 to 44,45 to 54,55 to 64,> 65,Total,Year_Quarter
 0,2019,1,Birnin-Gwari,Male,0,0,2,4,3,4,3,1,17,2019 Q1
 1,2019,1,Birnin-Gwari,Female,0,0,0,3,1,0,4,0,8,2019 Q1
 2,2019,2,Birnin-Gwari,Male,0,0,3,2,2,2,0,2,11,2019 Q2
