@@ -135,7 +135,7 @@ def show_gender_age_tb_bar(year_quarter):
     melted_df = pd.melt(
         block2b,
         id_vars=['Year_Quarter', 'LGA', 'Sex'],
-        value_vars=['0-4', '5-14', '15-24', '25-34', '35-44', '45-54', '55-64'],
+        value_vars=["0—4", "5—14", "15—24", "25—34", "35—44", "45—54", "55—64", "> 65"],
         var_name='Age_Group',
         value_name='Values'
     )
