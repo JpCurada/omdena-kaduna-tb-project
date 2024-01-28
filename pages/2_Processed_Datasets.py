@@ -26,6 +26,17 @@ block_type = st.radio('Select a data block to load:',
                         options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
 
+df_dict = {
+    'block1a': block1a_complete,
+    'block2a': block2a_complete,
+    'block2b': block2b_complete,
+    'block2c': block2c_complete,
+    'block2d': block2d_complete,
+    'block2e': block2e_complete,
+}
+
+st.data_editor(df_dict[block_type])
+
 with st.expander("Download the Datasets here"):
 
     @st.cache
