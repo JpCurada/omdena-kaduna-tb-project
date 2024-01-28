@@ -20,7 +20,7 @@ data_desc = {
     'block2a':'Comprehensive Breakdown of All TB Cases',
     'block2b':'Demographic Breakdown of All TB Cases (by Sex and Age Group)',
     'block2c':'Demographic Breakdown of New and Relapse TB Cases (by Sex and Age Group)',
-    'block2d':'Demographic Breakdown of HIV-Positive TB Cases (by Sex and Age Group)'
+    'block2e':'Demographic Breakdown of HIV-Positive TB Cases (by Sex and Age Group)'
 }
 
 st.write("""
@@ -57,7 +57,7 @@ st.markdown('---')
 
 col1, col2 = st.columns(2)
 block_type = col1.radio('Select a data block to process:',
-                        options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e),
+                        options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
 
 excel_file = col2.file_uploader("Choose a file", type = 'xlsx')
