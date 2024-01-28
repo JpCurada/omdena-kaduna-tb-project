@@ -48,7 +48,7 @@ For more information on how to use Pygwalker, please refer to the official [guid
 """)
 
 # Generate the HTML using Pygwalker
-pyg_html = pyg.to_html(processed_data)
+pyg_html = pyg.to_html(df_dict[block_type])
 
 # Embed the HTML into the Streamlit app
 components.html(pyg_html, height=1000, scrolling=True)
