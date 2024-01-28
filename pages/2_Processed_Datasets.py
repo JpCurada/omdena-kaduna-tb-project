@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 from visuals import im
+import pygwalker as pyg
 import pandas as pd
 
 st.set_page_config(
