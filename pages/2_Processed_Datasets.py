@@ -26,9 +26,6 @@ block_type = st.radio('Select a data block to load:',
                         options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
 
-st.radio()
-
-
 with st.expander("Download the Datasets here"):
 
     @st.cache
