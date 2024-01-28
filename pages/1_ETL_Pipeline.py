@@ -55,16 +55,17 @@ Transformed Data
 
 st.markdown('---')
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 block_type = col1.radio('Select a data block to process:',
                         options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
+year_choice = col2.number_input('Year of the recorded data:', min_value=2019, placeholder="Ex. 2023")
 
-excel_file = col2.file_uploader("Choose a file", type = 'xlsx')
+excel_file = col3.file_uploader("Choose a file", type = 'xlsx')
 
-if excel_file is not None and block_type is not None:
+if excel_file is not None and block_type is not None and year_choice is not None:
     with st.spinner('Processing...'):
-        processed_data = process_lga_data(block_type, excel_file, 2023)
+        processed_data = process_lga_data(block_type, excel_file, year_choice)
         # st.dataframe has a default comma in their values, to remove it:
         s = processed_data.style.format({"Year": lambda x : '{:.0f}'.format(x)})
         # Display the dataframe with formatted numeric columns
