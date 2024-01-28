@@ -36,6 +36,22 @@ df_dict = {
 }
 
 st.data_editor(df_dict[block_type])
+st.caption("Data from 2019 to 2023")
+
+st.subheader(f"Load and Explore the Transformed {block_type}", divider='grey')
+st.write("""
+Load and explore the transformed data block using Pygwalker. This interactive exploration 
+interface allows us to build charts by simply dragging and dropping the desired fields. 
+This hands-on approach facilitates a deeper understanding of the data and aids in the 
+discovery of valuable insights. 
+For more information on how to use Pygwalker, please refer to the official [guides on visualizing](https://docs.kanaries.net/graphic-walker/data-viz/create-data-viz).
+""")
+
+# Generate the HTML using Pygwalker
+pyg_html = pyg.to_html(processed_data)
+
+# Embed the HTML into the Streamlit app
+components.html(pyg_html, height=1000, scrolling=True)
 
 with st.expander("Download the Datasets here"):
 
