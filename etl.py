@@ -30,7 +30,11 @@ column_indices = {
     'block2d': {1: [44, 46],
                 2: [105, 107],
                 3: [166, 168],
-                4: [227, 229]}
+                4: [227, 229]},
+    'block2e': {1: [57, 58],
+                2: [118, 119],
+                3: [179, 180],
+                4: [240, 241]}
 }
 
 # Dictionary mapping each block to a dictionary of quarters and their corresponding ROW indices
@@ -39,7 +43,8 @@ row_indices = {
     'block2a': [2,13],
     'block2b': [1,11],
     'block2c': [1,11],
-    'block2d': [1,11]
+    'block2d': [1,11],
+    'block2e': [2,12]
 }
 
 # For 2019 to 2021 excel raw files
@@ -80,7 +85,10 @@ column_names = {
     'block2c': ["Year", "Quarter", "LGA", "Sex", "0 to 4", "5 to 14",
                    "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"],
     'block2d': ["Year", "Quarter", "LGA", "Sex", "0 to 4", "5 to 14",
-                   "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"]
+                   "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "> 65", "Total"], 
+    'block2e': ["Year", "Quarter", "LGA", "Male Total TB Cases Notified", "Female Total TB Cases Notified",
+                "Male TB HIV Positive Cases", "Female TB HIV Positive Cases", "Male TB HIV Negative Cases", "Female TB HIV Negative Cases",
+                "Male TB HIV Unknown Cases", "Female TB HIV Unknown Cases", "TB/HIV CPT", "TB/HIV ART"]
 }
 def process_lga_data(block, file_path, year):
     """
