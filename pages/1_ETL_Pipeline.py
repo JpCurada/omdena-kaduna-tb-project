@@ -59,7 +59,7 @@ col1, col2, col3 = st.columns(3)
 block_type = col1.radio('Select a data block to process:',
                         options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
-year_choice = col2.number_input('Year of the recorded data:', min_value=2019, placeholder="Ex. 2023")
+year_choice = col2.number_input('Year of the recorded data:', placeholder="Ex. `2023` then Press `Enter`")
 
 excel_file = col3.file_uploader("Choose a file", type = 'xlsx')
 
