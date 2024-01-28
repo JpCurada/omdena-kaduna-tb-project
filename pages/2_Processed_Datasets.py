@@ -84,3 +84,16 @@ st.download_button(
     mime='text/csv',
 )
 
+st.subheader('Block 2e: Demographic Breakdown of HIV-Positive TB Cases (by Sex and Case Category)', divider='grey')
+st.caption("Data from 2019 to 2023")
+
+block2e_complete = pd.read_csv("datasets/block2e_19_to_23_complete.csv", index_col=0)
+converted_block2e = convert_df(block2e_complete)
+
+st.download_button(
+    label="Download block2de",
+    data=converted_block2e,
+    file_name='block2e_processed.csv',
+    mime='text/csv',
+)
+
