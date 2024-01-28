@@ -22,7 +22,7 @@ block2c_complete = pd.read_csv("datasets/block2c_19_to_23_complete.csv", index_c
 block2d_complete = pd.read_csv("datasets/block2d_19_to_23_complete.csv", index_col=0)
 block2e_complete = pd.read_csv("datasets/block2e_19_to_23_complete.csv", index_col=0)
 
-block_type = col1.radio('Select a data block to load:',
+block_type = st.radio('Select a data block to load:',
                         options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
 
