@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.image('images/omdena_kaduna.png', use_column_width="auto")
 
-st.header("Kaduna TB ETL Pipeline", header='grey')
+st.header("Kaduna TB ETL Pipeline", divider='grey')
 
 st.write("""
 
