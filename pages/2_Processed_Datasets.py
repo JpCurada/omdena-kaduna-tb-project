@@ -56,7 +56,7 @@ components.html(pyg_html, height=1000, scrolling=True)
 
 with st.expander("Download the Datasets here"):
 
-    @st.cache
+    @st.cache_data
     def convert_df(df):
         # IMPORTANT: Cache the conversion to prevent computation on every rerun
         return df.to_csv().encode('utf-8')
