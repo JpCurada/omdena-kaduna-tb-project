@@ -41,10 +41,9 @@ Transformed Data
 
 """)
 
-st.write("Click this to get the [raw data](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) you can try with the ETL pipeline.")
-
-
 st.markdown('---')
+
+st.write("Click [raw data](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) to get the data you can try with the ETL pipeline.")
 
 col1, col2, col3 = st.columns(3)
 block_type = col1.radio('Select a data block to process:',
