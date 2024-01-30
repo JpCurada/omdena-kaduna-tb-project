@@ -58,13 +58,17 @@ if excel_file is not None and block_type is not None and year_choice is not None
         try:
             processed_data = process_lga_data(block_type, excel_file, year_choice)
             
-            # st.dataframe has a default comma in its values, to remove it:
+        except (KeyError, ValueError) as e:
+            st.error(f"Error: The uploaded Excel file does not adhere to the expected structure "
+                     "for 2023 TB cases. Please refer to the [2023 TB Cases Excel File](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) "
+                     "for proper formatting. If you need assistance, contact the team. 🚨")
+
+             # st.dataframe has a default comma in its values, to remove it:
             s = processed_data.style.format({"Year": lambda x: '{:.0f}'.format(x)})
-            
             # Display the formatted dataframe
             st.subheader(f"{data_desc[block_type]}", divider='grey')
             st.dataframe(s)
-
+          
             st.subheader(f"Load and Explore the Transformed {block_type}", divider='grey')
             st.write("""
             Load and explore the transformed data block using Pygwalker. This interactive exploration 
@@ -81,7 +85,4 @@ if excel_file is not None and block_type is not None and year_choice is not None
             # Embed the HTML into the Streamlit app
             components.html(pyg_html, height=1000, scrolling=True)
 
-        except (KeyError, ValueError) as e:
-            st.error(f"Error: {str(e)}. The uploaded Excel file does not adhere to the expected structure "
-                     "for 2023 TB cases. Please refer to the [documentation](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) "
-                     "for proper formatting. If you need assistance, contact support. 🚨")
+
