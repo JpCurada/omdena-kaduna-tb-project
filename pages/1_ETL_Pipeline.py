@@ -59,21 +59,24 @@ if excel_file is not None and block_type is not None and year_choice is not None
         # st.dataframe has a default comma in their values, to remove it:
         s = processed_data.style.format({"Year": lambda x : '{:.0f}'.format(x)})
         # Display the dataframe with formatted numeric columns
-        st.subheader(f"{data_desc[block_type]}", divider='grey')
-        st.dataframe(s)
-
-        st.subheader(f"Load and Explore the Transformed {block_type}", divider='grey')
-        st.write("""
-        Load and explore the transformed data block using Pygwalker. This interactive exploration 
-        interface allows us to build charts by simply dragging and dropping the desired fields. 
-        This hands-on approach facilitates a deeper understanding of the data and aids in the 
-        discovery of valuable insights. 
-        For more information on how to use Pygwalker, please refer to the official [guides on visualizing](https://docs.kanaries.net/graphic-walker/data-viz/create-data-viz).
-        """)
-
-        # Generate the HTML using Pygwalker
-        pyg_html = pyg.to_html(processed_data)
-
-        # Embed the HTML into the Streamlit app
-        components.html(pyg_html, height=1000, scrolling=True)
- 
+        try:
+          st.subheader(f"{data_desc[block_type]}", divider='grey')
+          st.dataframe(s)
+  
+          st.subheader(f"Load and Explore the Transformed {block_type}", divider='grey')
+          st.write("""
+          Load and explore the transformed data block using Pygwalker. This interactive exploration 
+          interface allows us to build charts by simply dragging and dropping the desired fields. 
+          This hands-on approach facilitates a deeper understanding of the data and aids in the 
+          discovery of valuable insights. 
+          For more information on how to use Pygwalker, please refer to the official [guides on visualizing](https://docs.kanaries.net/graphic-walker/data-viz/create-data-viz).
+          """)
+  
+          # Generate the HTML using Pygwalker
+          pyg_html = pyg.to_html(processed_data)
+  
+          # Embed the HTML into the Streamlit app
+          components.html(pyg_html, height=1000, scrolling=True)
+        except KeyError, ValueError:
+          st.error("Error: The uploaded Excel file does not adhere to the expected structure for 2023 TB cases. Please refer to the [documentation](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0)for proper formatting. If you need assistance, contact support.", icon="🚨")
+          
