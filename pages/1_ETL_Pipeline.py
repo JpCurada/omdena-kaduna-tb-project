@@ -83,8 +83,5 @@ if excel_file is not None and block_type is not None and year_choice is not None
 
         except (KeyError, ValueError) as e:
             st.error(f"Error: {str(e)}. The uploaded Excel file does not adhere to the expected structure "
-                     "for 2023 TB cases. Please refer to the [documentation](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) "
+                     "for 2023 TB cases. Please refer to the [TB Cases 2023 Excel File](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) "
                      "for proper formatting. If you need assistance, contact support. 🚨")
-
-else:
-    st.error("Please provide values for 'excel_file', 'block_type', and 'year_choice'. 🚨")
