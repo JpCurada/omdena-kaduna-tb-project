@@ -25,6 +25,18 @@ data_desc = {
 
 st.write("""
 
+This section is dedicated to the Python program that performs an Extract, Transform, Load (ETL) process on the Standard Excel dataset of Tuberculosis (TB) cases in Kaduna. The dataset is structured with multiple sheets, each representing data for a specific Local Government Area (LGA).
+
+The ETL process implemented here serves two main purposes:
+
+- **Extract:** The code reads data from an Excel file, extracting information from multiple sheets within the file. Each sheet corresponds to a specific LGA.
+
+- **Transform:** The extracted data is then transformed. This involves selecting specific rows and columns, inserting new data, renaming columns, and preparing the data in a format that is suitable for further analysis or processing.
+
+- **Load:** Finally, the transformed data is loaded into a pandas DataFrame. This DataFrame can be used for further data analysis tasks or can be saved in a different format like CSV for other uses.
+
+This section is an essential part of our data preprocessing pipeline, turning raw, multi-sheet Excel data into a clean, single-table format that’s easier to work with for downstream tasks such as data analysis and machine learning. By automating this process in a Streamlit application, we ensure that our data preprocessing is reproducible and consistent, saving us time and reducing the potential for manual errors. 
+
 Transformed Data
 
 - **Block1a:** Detailed Activities of Presumptive PTB Cases
@@ -38,18 +50,16 @@ Transformed Data
 - **Block2d:** Demographic Breakdown of HIV-Positive TB Cases (by Sex and Age Group)
 
 - **Block2e:** Demographic Breakdown of HIV-Positive TB Cases (by Sex and Case Category)
-
+                      
 """)
 
 st.markdown('---')
-
-st.write("Click [raw data](https://drive.google.com/drive/folders/1qeHsngqf-2UQ4uaycoE2ubc1BcBnocy0) to get the data you can try with the ETL pipeline.")
 
 col1, col2, col3 = st.columns(3)
 block_type = col1.radio('Select a data block to process:',
                         options = ('block1a', 'block2a', 'block2b', 'block2c', 'block2d', 'block2e'),
                         horizontal = True)
-year_choice = col2.number_input('Year of the recorded data:', placeholder="Ex. `2023` then Press `Enter`", min_value=2019, step=1)
+year_choice = col2.number_input('Year of the recorded data:', placeholder="Ex. `2023` then Press `Enter`", step=1)
 
 excel_file = col3.file_uploader("Choose a file", type = 'xlsx')
 
