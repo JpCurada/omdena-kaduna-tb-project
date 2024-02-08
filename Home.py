@@ -10,20 +10,39 @@ st.set_page_config(
 
 st.image('images/omdena_kaduna.png', use_column_width="auto")
 
-st.header("Kaduna TB ETL Pipeline", divider='grey')
+st.header("Kaduna TB Explorer: A Data Science Approach to Tuberculosis Analysis")
 
+st.subheader('Challenge Background', divider='grey')
 st.write("""
+         Tuberculosis (TB) is often underestimated by the general public, 
+         despite being a significant health risk. As a communicable disease, 
+         it can easily spread from person to person. Recognizing its impact, 
+         the Sustainable Development Goals (SDGs) classify TB alongside HIV and 
+         Malaria as an epidemic. The Nigerian Government’s National Tuberculosis 
+         and Leprosy Control Programme (NTBLCP) Strategic Plan 2021–2025 aims to 
+         end the TB epidemic in Nigeria by ensuring all Nigerians have access to 
+         comprehensive, high-quality, patient-centered, and community-owned TB services.
+         """)
 
-This section is dedicated to the Python program that performs an Extract, Transform, Load (ETL) process on the Standard Excel dataset of Tuberculosis (TB) cases in Kaduna. The dataset is structured with multiple sheets, each representing data for a specific Local Government Area (LGA).
+st.subheader('The Problem', divider='grey')
+st.write("""
+            This project seeks to automate the analysis of state-collected 
+         and compiled data using data science. The goal is to present insightful 
+         visualizations of the data through an interactive tool.
+         """)
 
-The ETL process implemented here serves two main purposes:
+st.subheader('Goal of the Project', divider='grey')
+st.write("""
+            Our objective is to address the irregularities in the community-collected data 
+         by cleaning, pre-processing, and exploring available TB data in Kaduna State from 
+         2019 to the most recent quarter of 2023. We aim to create a tool that health service 
+         providers can use to make informed decisions about TB in Kaduna State. We also 
+         strive to foster a strong relationship with the state agency responsible for 
+         monitoring TB. Lastly, we aim to develop an interactive tool for analyzing the 
+         collected data each quarter. This tool will present the data comprehensively, 
+         allowing for logical and factual deductions and visualizations.
+         """)
 
-- **Extract:** The code reads data from an Excel file, extracting information from multiple sheets within the file. Each sheet corresponds to a specific LGA.
 
-- **Transform:** The extracted data is then transformed. This involves selecting specific rows and columns, inserting new data, renaming columns, and preparing the data in a format that is suitable for further analysis or processing.
 
-- **Load:** Finally, the transformed data is loaded into a pandas DataFrame. This DataFrame can be used for further data analysis tasks or can be saved in a different format like CSV for other uses.
-
-ETL Pipeline is an essential part of our data preprocessing pipeline, turning raw, multi-sheet Excel data into a clean, single-table format that’s easier to work with for downstream tasks such as data analysis and machine learning. By automating this process in a Streamlit application, we ensure that our data preprocessing is reproducible and consistent, saving us time and reducing the potential for manual errors. 
-""")
 
